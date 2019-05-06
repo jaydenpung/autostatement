@@ -18,7 +18,9 @@ const imap = new Imap({
     port: 993,
     tls: true,
     markSeen: true,
-    markRead: true
+    markRead: true,
+    authTimeout: 60000,
+    connTimeout: 60000
 });
 
 function openInbox(cb) {
@@ -26,6 +28,12 @@ function openInbox(cb) {
 }
 
 imap.once('ready', function () {
+
+    const dir = './pdf';
+    if (!fs.existsSync(dir)){
+        fs.mkdirSync(dir);
+    }
+
     openInbox(function (err, box) {
         if (err) throw err;
         repeat();
@@ -134,6 +142,7 @@ function findAttachmentParts(struct, attachments) {
 }
 
 function buildAttMessageFunction(attachment) {
+
     let filename = './pdf/' + attachment.params.name;
     let fileDate = attachment.date;
     let encoding = attachment.encoding;
