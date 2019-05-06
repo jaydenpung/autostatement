@@ -1,0 +1,7 @@
+node_modules/*
+db/db.js
+out/*
+docdash/*
+logfile.log
+.compiled/*
+src/config/config.js
