@@ -19,7 +19,8 @@
     "dropbox-v2-api": "^2.4.0",
     "forever": "0.15.3",
     "imap": "^0.8.19",
-    "node-qpdf": "^1.0.3"
+    "node-qpdf": "^1.0.3",
+    "qpdf": "0.1.0-prealpha.1"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
