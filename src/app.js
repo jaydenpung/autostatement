@@ -29,7 +29,7 @@ imap.once('ready', function () {
     openInbox(function (err, box) {
         if (err) throw err;
         repeat();
-        setInterval(repeat, 500000);
+        setInterval(repeat, 30 * 60 * 1000);
 
         function repeat() {
             imap.search(['UNSEEN', ['FROM', 'm2u@bills.maybank2u.com.my']], function (err, results) {
