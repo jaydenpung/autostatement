@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node_modules/.bin/nodemon src/app.js --exec babel-node --",
-    "forever": "forever start -c 'node -r babel-register' src/app.js",
+    "forever": "forever start -c 'node -r babel-register' --uid autostatement src/app.js",
     "compile": "babel src --out-dir .compiled --source-maps"
   },
   "author": "",
