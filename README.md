@@ -35,3 +35,5 @@ This project access your email constantly, reading emails for pdf attachments, d
     
 ###Notes
 1. If imap connection throws error about authentication, make sure you have allow less secured app / third party app to access your mail account in your respective mail service provider portal
+2. pm2 command:
+```pm2 --name "autostatement" start npm -- run start```
